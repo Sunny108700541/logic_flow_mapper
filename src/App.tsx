@@ -1,4 +1,3 @@
-import React from "react";
 import LogicNode from "./components/LogicNode";
 import Toolbar from "./components/Toolbar";
 import { useGraphState } from "./hooks/useGraphState";
@@ -38,7 +37,7 @@ export default function App() {
         {/* Toolbar */}
         <Toolbar graphState={graphState} />
 
-        {/* How to use — quick guide */}
+
         <div className="rounded-lg border border-slate-800 bg-slate-900/50 px-4 py-3 text-xs text-slate-500 flex flex-wrap gap-x-6 gap-y-1">
           <span>
             <span className="text-slate-400">+ Branch</span> — add a child condition
@@ -54,7 +53,7 @@ export default function App() {
           </span>
         </div>
 
-        {/* Logic tree */}
+
         <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
           <LogicNode
             nodeId={graphState.rootId}

@@ -29,7 +29,7 @@ export function addChildNode(nodes: NodeMap, parentId: NodeId): NodeMap {
  * Deletes a node and all its descendants recursively.
  * Also removes any references to the deleted nodes from other nodes.
  */
-export function deleteNode(nodes: NodeMap, targetId: NodeId, rootId: NodeId): NodeMap {
+export function deleteNode(nodes: NodeMap, targetId: NodeId, _rootId: NodeId): NodeMap {
   // Collect all node ids to remove (target + all descendants)
   const toRemove = new Set<NodeId>();
 

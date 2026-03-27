@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { GraphState } from "../types";
 
 interface Props {
@@ -18,7 +18,7 @@ export default function Toolbar({ graphState }: Props) {
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center gap-3">
-        {/* Cycle status badge */}
+
         <div
           className={`
             flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-medium
@@ -33,7 +33,7 @@ export default function Toolbar({ graphState }: Props) {
             : "No cycles — logic is valid"}
         </div>
 
-        {/* Simulate button */}
+
         <button
           onClick={handleSimulate}
           disabled={hasCycle}
@@ -48,14 +48,14 @@ export default function Toolbar({ graphState }: Props) {
         </button>
       </div>
 
-      {/* Simulation result */}
+
       {simResult && (
         <div className="rounded-lg bg-emerald-900/30 px-3 py-2 text-sm text-emerald-300 ring-1 ring-emerald-800 animate-pulse">
           {simResult}
         </div>
       )}
 
-      {/* Cycle explanation */}
+
       {hasCycle && (
         <div className="rounded-lg bg-red-950/40 px-3 py-2 text-xs text-red-400 ring-1 ring-red-900">
           Nodes highlighted in red form a logic loop. Remove or re-link them to resolve the cycle.
